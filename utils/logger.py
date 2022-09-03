@@ -7,7 +7,7 @@ from json import JSONDecodeError
 logger = logging.getLogger("api")
 
 
-def logging(message):
+def logging_deco(message: str):
     """Request Logging."""
 
     def wrapper(function):

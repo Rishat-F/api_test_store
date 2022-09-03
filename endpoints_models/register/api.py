@@ -1,12 +1,12 @@
 from pydantic import BaseModel
 
 from endpoints_models.register.model import DataRegister
-from utils.logger import logging as log
+from utils.logger import logging_deco as log
 from utils.validator import Validator
 
 
 class Register(Validator):
-    """API endpoint post"""
+    """API endpoint post."""
 
     POST_REGISTER = "/register"
 
@@ -15,7 +15,7 @@ class Register(Validator):
 
     @log("Post Register")
     def post(self, data: DataRegister, type_response: BaseModel):
-        """Post request"""
+        """Post request."""
         response = self.app.client.request(
             method="POST",
             url=f"{self.app.url}{self.POST_REGISTER}",
