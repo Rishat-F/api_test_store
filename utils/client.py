@@ -8,8 +8,7 @@ class Client:
     @staticmethod
     def request(method: str, url: str, **kwargs) -> Response:
         """
-        Request method
-        method: method for the new Request object: get, OPTIONS, HEAD, POST, PUT, PATCH, or DELETE. # noqa
+        Request method: method for the new Request object: get, OPTIONS, HEAD, POST, PUT, PATCH, or DELETE. # noqa
         url – URL for the new Request object.
         **kwargs:
             params – (optional) Dictionary, list of tuples or bytes to send in the query string for the Request. # noqa

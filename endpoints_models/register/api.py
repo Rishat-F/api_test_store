@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 from endpoints_models.register.model import DataRegister
-from utils.logger import logging as log
+from utils.logger import logging_deco as log
 from utils.validator import Validator
 
 
