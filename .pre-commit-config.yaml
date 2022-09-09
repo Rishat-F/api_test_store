@@ -31,7 +31,7 @@ repos:
         args: [
           "--max-doc-length=88",
           "--max-line-length=88",  # Compatibility with black
-          "--extend-ignore=E203"  # Compatibility with black
+          "--extend-ignore=E203, D100,  D101, D103, D104, D400, D107"  # Compatibility with black
         ]
   # List of all Flake8 rules: curl https://www.flake8rules.com/api/rules.json
 
