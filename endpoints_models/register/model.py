@@ -11,7 +11,7 @@ class DataRegister(BaseModel):
     password: str
 
     @staticmethod
-    def random():
+    def random() -> object:
         """Генерация данных для регистрации."""
         return DataRegister(username=fake.name(), password=fake.password())
 
