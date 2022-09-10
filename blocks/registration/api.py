@@ -8,7 +8,7 @@ from requests import Response
 
 from blocks.registration.model import RegistrationData
 from utils.logger import log
-from utils.request import Client
+from utils.requester import Client
 from utils.validator import Validator
 
 

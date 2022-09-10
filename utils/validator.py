@@ -18,9 +18,9 @@ class Validator:
         """Transform response json to response.data field."""
         if response_model:
             try:
-                response.data = response_model.parse_obj(
+                response.data = response_model.parse_obj(  # type: ignore
                     response.json()
-                )  # type: ignore
+                )
             except (ValidationError, JSONDecodeError) as err:
                 return response, err
         return response, None

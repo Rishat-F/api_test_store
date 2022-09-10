@@ -32,6 +32,6 @@ paths = ["."]
 [[tool.mypy.overrides]]
 module = [
     "tests.*",
-    "utils.logger",
+    "utils.logger.*",
 ]
 ignore_errors = true
