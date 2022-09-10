@@ -20,9 +20,9 @@ class Registration(Validator):
 
     REGISTER_USER = "/register"
 
-    @log("POST /register")
+    @log("POST /register")  # type: ignore
     def register_user(
-        self, data: RegistrationData, response_model: BaseModel = None
+        self, data: RegistrationData, response_model: Optional[BaseModel] = None
     ) -> Tuple[Response, Optional[Exception]]:
         """Register new user."""
         response = self.client.request(

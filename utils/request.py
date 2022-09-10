@@ -1,6 +1,8 @@
 """Sending requests."""
 
 
+from typing import Any
+
 import requests
 from requests import Response
 
@@ -8,11 +10,11 @@ from requests import Response
 class Client:
     """Client for sending requests."""
 
-    def __init__(self, api_url):
+    def __init__(self, api_url: str):
         self.api_url = api_url
 
     @staticmethod
-    def request(method: str, url: str, **kwargs) -> Response:
+    def request(method: str, url: str, **kwargs: Any) -> Response:
         """
         Send request.
 
