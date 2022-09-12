@@ -30,13 +30,14 @@ jobs:
         uses: Gr1N/setup-poetry@v7
 
 
-      - name: Activate Poetry venv
-        run: poetry shell
-
-
       - name: Install dependencies
         run: |
           poetry install
+
+
+      - name: Activate Poetry venv
+        run: |
+          poetry shell
 
 
       - name: Lint with pre-commit trailing-whitespace hook
