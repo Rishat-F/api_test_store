@@ -2,7 +2,7 @@
 
 
 from blocks.registration.api import Registration
-from utils.requester import Client
+from utils.request_sender import Client
 
 
 class Application:
