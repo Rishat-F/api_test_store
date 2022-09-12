@@ -33,9 +33,9 @@ paths = ["."]
 module = [
     "tests.*",
     "utils.logger.*",
-    "client.*",
-    "validator.*",
-    "api.*",
+    "client.py",
+    "validator.py",
+    "api.py",
 
 ]
 ignore_errors = true
