@@ -18,6 +18,8 @@ mypy = "^0.971"
 pre-commit = "^2.20.0"
 vulture = "^2.5"
 pre-commit-hooks = "^4.3.0"
+types-requests = "^2.28.10"
+Faker = "^14.2.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -31,5 +33,6 @@ paths = ["."]
 [[tool.mypy.overrides]]
 module = [
     "tests.*",
+    "utils.logger.*",
 ]
 ignore_errors = true
