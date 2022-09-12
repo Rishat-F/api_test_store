@@ -1,14 +1,12 @@
 """API tests."""
 
 
-from datetime import datetime
-
-from blocks.registration.model import SuccessfulRegistration
+from blocks.registration.model import RegistrationData, SuccessfulRegistration
 from common.constants import Registration
 
 
 def test_register_user(app):
-    data = {"username": datetime.now().isoformat(), "password": "password"}
+    data = RegistrationData.random().dict()
     response = app.registration.register_user(
         data=data, response_model=SuccessfulRegistration
     )
