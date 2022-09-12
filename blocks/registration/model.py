@@ -16,7 +16,7 @@ class RegistrationData(BaseModel):
     @staticmethod
     def random():  # type: ignore
         """Random username and password for registration."""
-        return RegistrationData(username=fake.username(), password=fake.password())
+        return RegistrationData(username=fake.name(), password=fake.password())
 
 
 class SuccessfulRegistration(BaseModel):
