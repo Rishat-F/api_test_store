@@ -1,5 +1,6 @@
 """Response models."""
 
+from __future__ import annotations
 
 from faker import Faker
 from pydantic import BaseModel
@@ -14,7 +15,7 @@ class RegistrationData(BaseModel):
     password: str
 
     @staticmethod
-    def random():  # type: ignore
+    def random() -> RegistrationData:
         """Random username and password for registration."""
         return RegistrationData(username=fake.name(), password=fake.password())
 
